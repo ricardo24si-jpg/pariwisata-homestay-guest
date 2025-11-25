@@ -1,0 +1,63 @@
+@extends('layouts.guest.app')
+
+@section('content')
+    <div class="container py-5">
+        <h2 class="mb-4">Edit Destinasi Wisata</h2>
+
+        <form action="{{ route('destinasi.update', $destinasi->destinasi_id) }}" method="POST">
+            @csrf
+            @method('PUT')
+
+            <div class="row g-3">
+
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">Nama Destinasi</label>
+                    <input type="text" name="nama" class="form-control" value="{{ old('nama', $destinasi->nama) }}"
+                        required>
+                </div>
+
+                <div class="col-md-12">
+                    <label class="form-label fw-bold">Deskripsi</label>
+                    <textarea name="deskripsi" class="form-control" rows="4">{{ old('deskripsi', $destinasi->deskripsi) }}</textarea>
+                </div>
+
+                <div class="col-md-8">
+                    <label class="form-label fw-bold">Alamat</label>
+                    <input type="text" name="alamat" class="form-control"
+                        value="{{ old('alamat', $destinasi->alamat) }}">
+                </div>
+
+                <div class="col-md-2">
+                    <label class="form-label fw-bold">RT</label>
+                    <input type="text" name="rt" class="form-control" value="{{ old('rt', $destinasi->rt) }}">
+                </div>
+
+                <div class="col-md-2">
+                    <label class="form-label fw-bold">RW</label>
+                    <input type="text" name="rw" class="form-control" value="{{ old('rw', $destinasi->rw) }}">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">Jam Buka</label>
+                    <input type="text" name="jam_buka" class="form-control"
+                        value="{{ old('jam_buka', $destinasi->jam_buka) }}">
+                </div>
+
+                <div class="col-md-3">
+                    <label class="form-label fw-bold">Harga Tiket</label>
+                    <input type="number" name="tiket" class="form-control" value="{{ old('tiket', $destinasi->tiket) }}">
+                </div>
+
+                <div class="col-md-3">
+                    <label class="form-label fw-bold">Kontak</label>
+                    <input type="text" name="kontak" class="form-control"
+                        value="{{ old('kontak', $destinasi->kontak) }}">
+                </div>
+
+            </div>
+
+            <button class="btn btn-primary mt-4 px-4">Update</button>
+            <a href="{{ route('destinasi.index') }}" class="btn btn-secondary mt-4 px-4">Kembali</a>
+        </form>
+    </div>
+@endsection
