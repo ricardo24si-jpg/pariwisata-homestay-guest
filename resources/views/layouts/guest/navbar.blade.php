@@ -88,10 +88,28 @@
             </div>
 
             {{-- LOGIN --}}
-            <a href=""
-                class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">
-                Login
-            </a>
+            @if (session('user'))
+                <div class="dropdown ms-3">
+                    <a href="#" class="btn btn-outline-primary rounded-pill dropdown-toggle"
+                        data-bs-toggle="dropdown">
+                        <i class="fa fa-user me-1"></i> {{ session('user')->name }}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button class="dropdown-item text-danger"><i class="fa fa-sign-out-alt me-2"></i>
+                                    Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            @else
+                <a href="{{ route('users.create') }}" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+            @endif
         </div>
     </nav>
 </div>

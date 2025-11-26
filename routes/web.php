@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DestinasiWisataController;
 use App\Http\Controllers\HomestayController;
 use App\Http\Controllers\KamarHomestayController;
@@ -12,6 +13,10 @@ Route::resource('homestay', HomestayController::class);
 Route::resource('warga', WargaController::class);
 Route::resource('users', UserController::class);
 Route::resource('kamar', KamarHomestayController::class);
+
+Route::get('/login', [AuthController::class, 'index'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/', function () {
     return view('pages.index');

@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        /* ===== Background sama seperti LOGIN (warna + bubble) ===== */
         body {
             height: 100vh;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #a3a467; /* warna solid sesuai permintaan */
+            background-color: #d1d5db;
             font-family: 'Poppins', sans-serif;
+            position: relative;
         }
 
-        /* efek lembut di background agar tidak datar */
-        body::before, body::after {
+        body::before,
+        body::after {
             content: '';
             position: absolute;
             border-radius: 50%;
@@ -40,121 +45,128 @@
             right: -50px;
         }
 
+        /* ===== Register Card (Tema EXACT sama Login) ===== */
         .register-card {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             width: 420px;
-            background: rgba(255, 255, 255, 0.97);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(6px);
             border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-            padding: 2.5rem;
-            animation: fadeIn 0.6s ease;
+            padding: 2.4rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: 0.35s ease;
         }
 
-        .register-card h3 {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            color: #1e3a8a;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .register-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
         }
 
         .form-label {
-            font-weight: 500;
+            font-weight: 600;
             color: #374151;
         }
 
         .form-control {
-            border-radius: 10px;
-            padding: 10px 14px;
+            border-radius: 12px;
+            padding: 11px 14px;
+            border: 1px solid #d1d5db;
+            transition: .3s ease;
         }
 
+        .form-control:focus {
+            border-color: #1e40af;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+
+        /* ===== Button sama dengan Login ===== */
         .btn-primary {
+            border-radius: 50px;
+            padding: 11px 0;
+            font-weight: 600;
             background: #2563eb;
             border: none;
-            border-radius: 10px;
-            padding: 10px 0;
-            font-weight: 600;
-            transition: background 0.3s;
+            transition: 0.3s ease-in-out;
         }
 
         .btn-primary:hover {
             background: #1e40af;
+            transform: translateY(-2px);
         }
 
-        .alert {
-            border-radius: 10px;
-        }
-
-        .register-card p {
-            text-align: center;
-            font-size: 0.9rem;
-            margin-top: 1rem;
-        }
-
-        .register-card a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-
-        .register-card a:hover {
-            text-decoration: underline;
+        .footer-text {
+            opacity: 0.85;
+            letter-spacing: .3px;
         }
     </style>
 </head>
+
 <body>
 
-<div class="register-card">
-    <h3>REGISTER</h3>
+    <div class="register-card">
 
-    @if (session('success'))
-        <div class="alert alert-success">{{ session('success') }}</div>
-    @endif
-
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul class="mb-0">
-                @foreach ($errors->all() as $err)
-                    <li>{{ $err }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
-    <form action="{{ route('users.store') }}" method="POST">
-        @csrf
-
-        <div class="mb-3">
-            <label class="form-label">Nama Lengkap</label>
-            <input type="text" name="name" value="{{ old('name') }}" class="form-control" placeholder="Masukkan nama...">
+        <div class="text-center mb-4">
+            <img src="{{ asset('Assets/img/brand-logo.png') }}" width="75" class="mb-3">
+            <h3 class="fw-bold text-primary">Create Account</h3>
+            <p class="text-muted small">Buat akun baru untuk melanjutkan.</p>
         </div>
 
-        <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="Masukkan email...">
-        </div>
+        @if (session('success'))
+            <div class="alert alert-success">{{ session('success') }}</div>
+        @endif
 
-        <div class="mb-3">
-            <label class="form-label">Password</label>
-            <input type="password" name="password" class="form-control" placeholder="Masukkan password...">
-        </div>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul class="mb-0">
+                    @foreach ($errors->all() as $err)
+                        <li>{{ $err }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
-        <div class="mb-3">
-            <label class="form-label">Konfirmasi Password</label>
-            <input type="password" name="password_confirmation" class="form-control" placeholder="Ulangi password...">
-        </div>
+        <form action="{{ route('users.store') }}" method="POST">
+            @csrf
 
-        <button type="submit" class="btn btn-primary w-100">Daftar</button>
-    </form>
+            <div class="mb-3">
+                <label class="form-label">Nama Lengkap</label>
+                <input type="text" name="name" value="{{ old('name') }}" class="form-control"
+                    placeholder="Masukkan nama lengkap...">
+            </div>
 
-    <p class="text-center mt-3 small">
-        Sudah punya akun? <a href="{{ route('login') }}">Login di sini</a>
-    </p>
-</div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" value="{{ old('email') }}" class="form-control"
+                    placeholder="Masukkan email...">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Masukkan password...">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Konfirmasi Password</label>
+                <input type="password" name="password_confirmation" class="form-control"
+                    placeholder="Ulangi password...">
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mt-2">Buat Akun</button>
+        </form>
+
+        <p class="text-center mt-4 small">
+            Sudah punya akun?
+            <a href="{{ route('login') }}" class="fw-semibold text-primary">Masuk di sini</a>
+        </p>
+
+        <p class="text-center text-muted small footer-text">
+            © {{ date('Y') }} Ricardo — All rights reserved.
+        </p>
+
+    </div>
 
 </body>
+
 </html>

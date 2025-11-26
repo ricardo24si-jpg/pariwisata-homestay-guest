@@ -60,7 +60,7 @@ class UserController extends Controller
             'password' => Hash::make($request->password), /** HASH PASSWORD */
         ]);
 
-        return redirect()->route('form-login')->with('success', 'User berhasil ditambahkan!');
+        return redirect()->route('login')->with('success', 'User berhasil ditambahkan!');
     }
 
     /**
