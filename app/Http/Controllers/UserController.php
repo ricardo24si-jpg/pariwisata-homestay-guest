@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\User;
@@ -52,12 +53,15 @@ class UserController extends Controller
             'password.required' => 'Password wajib diisi!',
             'password.min'      => 'Password minimal 8 karakter!',
             'password.regex'    => 'Password harus ada huruf kapital!',
+            'role' => 'required|in:admin,warga,mitra',
         ]);
 
         User::create([
             'name'     => $request->name,
             'email'    => $request->email,
-            'password' => Hash::make($request->password), /** HASH PASSWORD */
+            'password' => Hash::make($request->password),
+            /** HASH PASSWORD */
+            'role' => $request->role,
         ]);
 
         return redirect()->route('login')->with('success', 'User berhasil ditambahkan!');
@@ -90,6 +94,7 @@ class UserController extends Controller
             'email' => "required|email|unique:users,email,{$user->id}",
             'password'        => 'nullable|min:8|regex:/[A-Z]/',
             'profile_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'role' => 'required|in:admin,warga,mitra',
         ]);
 
         $data = $request->only(['name', 'email']);

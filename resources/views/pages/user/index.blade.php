@@ -108,6 +108,10 @@
                         @if ($user->role)
                             <div class="badge bg-primary rounded-pill px-3 mb-2">{{ ucfirst($user->role) }}</div>
                         @endif
+                        {{-- Role --}}
+                        @if ($user->role)
+                            <div class="badge bg-primary rounded-pill px-3 mb-2">{{ ucfirst($user->role) }}</div>
+                        @endif
 
                         {{-- Aksi --}}
                         <div class="action-btns mt-3 d-flex justify-content-center gap-2">

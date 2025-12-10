@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Contracts\Database\Eloquent\Builder;
@@ -48,5 +49,11 @@ class DestinasiWisata extends Model
                 $q->orWhere($col, 'LIKE', "%{$value}%");
             }
         });
+    }
+    public function medias()
+    {
+        return $this->hasMany(\App\Models\Media::class, 'ref_id')
+            ->where('ref_table', 'destinasi_wisata')
+            ->orderBy('sort_order');
     }
 }

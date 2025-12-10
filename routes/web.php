@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Route;
 Route::resource('destinasi', DestinasiWisataController::class);
 Route::resource('homestay', HomestayController::class);
 Route::resource('warga', WargaController::class);
-Route::resource('users', UserController::class);
 Route::resource('kamar', KamarHomestayController::class);
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
@@ -33,3 +32,7 @@ Route::get('/service', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
+
+Route::middleware('checkislogin')->group(function () {
+    Route::resource('/users', UserController::class);
+});

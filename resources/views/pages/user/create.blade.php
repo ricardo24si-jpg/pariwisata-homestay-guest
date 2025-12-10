@@ -152,6 +152,15 @@
                 <input type="password" name="password_confirmation" class="form-control"
                     placeholder="Ulangi password...">
             </div>
+            <div class="mb-3">
+                <label class="form-label">Role</label>
+                <select name="role" class="form-control">
+                    <option value="karyawan" {{ old('role') == 'karyawan' ? 'selected' : '' }}>Admin</option>
+                    <option value="manager" {{ old('role') == 'manager' ? 'selected' : '' }}>Warga</option>
+                    <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Mitra</option>
+                </select>
+            </div>
+
 
             <button type="submit" class="btn btn-primary w-100 mt-2">Buat Akun</button>
         </form>

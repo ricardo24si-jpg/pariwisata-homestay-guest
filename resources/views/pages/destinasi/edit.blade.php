@@ -4,7 +4,7 @@
     <div class="container py-5">
         <h2 class="mb-4">Edit Destinasi Wisata</h2>
 
-        <form action="{{ route('destinasi.update', $destinasi->destinasi_id) }}" method="POST">
+        <form action="{{ route('destinasi.update', $destinasi->destinasi_id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
@@ -52,6 +52,10 @@
                     <label class="form-label fw-bold">Kontak</label>
                     <input type="text" name="kontak" class="form-control"
                         value="{{ old('kontak', $destinasi->kontak) }}">
+                </div>
+                <div class="col-md-12 mt-3">
+                    <label class="form-label fw-bold">Upload Gambar Destinasi</label>
+                    <input type="file" name="media[]" multiple accept="image/*">
                 </div>
 
             </div>

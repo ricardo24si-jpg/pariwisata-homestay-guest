@@ -6,8 +6,11 @@
 
         <div class="row g-4">
 
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/service-1.jpg') }}" class="img-fluid rounded">
+            <div>
+                @foreach ($medias as $media)
+                    <img src="{{ asset('storage/' . $media->file_name) }}" alt="Media" class="img-fluid rounded mb-3"
+                        style="max-width: 400px;">
+                @endforeach
             </div>
 
             <div class="col-lg-6">

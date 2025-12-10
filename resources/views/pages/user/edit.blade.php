@@ -42,6 +42,14 @@
                     <small class="text-danger">{{ $message }}</small>
                 @enderror
             </div>
+            <div class="mb-3">
+                <label class="form-label">Role</label>
+                <select name="role" class="form-control">
+                    <option value="karyawan" {{ old('role') == 'karyawan' ? 'selected' : '' }}>Admin</option>
+                    <option value="manager" {{ old('role') == 'manager' ? 'selected' : '' }}>Warga</option>
+                    <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Mitra</option>
+                </select>
+            </div>
 
             <button class="btn btn-primary">Update</button>
             <a href="{{ route('users.index') }}" class="btn btn-secondary">Batal</a>

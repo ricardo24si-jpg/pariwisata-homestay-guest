@@ -177,7 +177,6 @@
                 <i class="fa fa-plus"></i> Tambah Homestay
             </a>
 
-
             <div class="row g-4">
                 @foreach ($data as $item)
                     <div class="col-lg-4 col-md-6">
@@ -201,7 +200,13 @@
 
                             <!-- Image -->
                             <div class="dest-img">
-                                <img src="{{ asset('assets/img/service-1.jpg') }}" alt="Image">
+                                @php
+                                    $firstFoto = $item->medias->first(); // ambil foto pertama
+                                    $fotoPath = $firstFoto
+                                        ? asset('storage/' . $firstFoto->file_name)
+                                        : asset('assets/img/service-1.jpg'); // default jika kosong
+                                @endphp
+                                <img src="{{ $fotoPath }}" alt="Image" class="img-fluid">
                                 <div class="dest-title">{{ $item->nama }}</div>
                             </div>
 
