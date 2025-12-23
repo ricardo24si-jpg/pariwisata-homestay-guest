@@ -59,7 +59,7 @@
     <!-- Carousel End -->
 
     <!-- About Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid overflow-hidden py-5">
         <div class="container pt-5">
             <div class="row g-5">
                 <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
@@ -73,10 +73,13 @@
                 </div>
                 <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
                     <h5 class="sub-title pe-3">About the company</h5>
-                    <h1 class="display-5 mb-4">We’re Trusted Immigration Consultant Agency.</h1>
-                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto
-                        consectetur iusto perferendis blanditiis assumenda dignissimos, commodi fuga culpa earum
-                        explicabo libero sint est mollitia saepe! Sequi asperiores rerum nemo!</p>
+                    <h1 class="display-5 mb-4">Agensi Konsultan Imigrasi Terpercaya.</h1>
+                    <p class="mb-4">
+                        ParStay hadir untuk memudahkan Anda menjelajahi destinasi wisata menarik, memesan homestay
+                        dan kamar yang nyaman,
+                        serta membaca ulasan wisata yang terpercaya. Semua informasi lengkap dan praktis, agar pengalaman
+                        liburan Anda semakin menyenangkan.
+                    </p>
                     <div class="row gy-4 align-items-center">
                         <div class="col-12 col-sm-6 d-flex align-items-center">
                             <i class="fas fa-map-marked-alt fa-3x text-secondary"></i>
@@ -97,10 +100,10 @@
                         </div>
                         <div class="col-8 col-md-9">
                             <div class="mb-5">
-                                <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i>
-                                    Offer 100 % Genuine Assistance</p>
-                                <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i>
-                                    It’s Faster & Reliable Execution</p>
+                                <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i> Offer
+                                    100 % Genuine Assistance</p>
+                                <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i> It’s
+                                    Faster & Reliable Execution</p>
                                 <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i>
                                     Accurate & Expert Advice</p>
                             </div>
@@ -115,8 +118,7 @@
                                 </div>
                                 <div class="d-flex flex-column justify-content-center">
                                     <span class="text-primary">Have any questions?</span>
-                                    <span class="text-secondary fw-bold fs-5" style="letter-spacing: 2px;">Free: +0123
-                                        456 7890</span>
+                                    <span class="text-secondary fw-bold fs-5" style="letter-spacing: 2px;">Free: +62 812-6477-5971</span>
                                 </div>
                             </div>
                         </div>
@@ -435,74 +437,63 @@
             <div class="office">
                 <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">Worlwide Offices</h5>
+                        <h5 class="sub-title text-primary px-3">Alur Pemesanan</h5>
                     </div>
-                    <h1 class="display-5 mb-4">Explore Our Office Worldwide</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at
-                        atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime
-                        veniam necessitatibus saepe in ab? Repellat!</p>
+                    <h1 class="display-5 mb-4">Cara Memesan Wisata & Homestay</h1>
+                    <p class="mb-0">Ikuti alur berikut untuk menjelajahi destinasi wisata, memilih homestay, dan melakukan
+                        booking dengan mudah.</p>
                 </div>
                 <div class="row g-4 justify-content-center">
+
+                    <!-- Destinasi Wisata -->
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="office-item p-4">
+                        <div class="office-item p-4 text-center">
                             <div class="office-img mb-4">
-                                <img src="{{ asset('assets/img/office-2.jpg') }}" class="img-fluid w-100 rounded"
-                                    alt="">
+                                <img src="{{ asset('assets/img/pemandangan1.jpg') }}" class="img-fluid w-100 rounded"
+                                    alt="Destinasi Wisata">
                             </div>
-                            <div class="office-content d-flex flex-column">
-                                <h4 class="mb-2">Australia</h4>
-                                <a href="#" class="text-secondary fs-5 mb-2">+123.456.7890</a>
-                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd
-                                    States of America.</p>
-                            </div>
+                            <h4 class="mb-2">Destinasi Wisata</h4>
+                            <p class="mb-0">Telusuri berbagai destinasi wisata menarik yang tersedia di website kami.</p>
                         </div>
                     </div>
+
+                    <!-- Homestay -->
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="office-item p-4">
+                        <div class="office-item p-4 text-center">
                             <div class="office-img mb-4">
-                                <img src="{{ asset('assets/img/office-1.jpg') }}" class="img-fluid w-100 rounded"
-                                    alt="">
+                                <img src="{{ asset('assets/img/Homestay2.jpeg') }}" class="img-fluid w-100 rounded"
+                                    alt="Homestay">
                             </div>
-                            <div class="office-content d-flex flex-column">
-                                <h4 class="mb-2">Canada</h4>
-                                <a href="#" class="text-secondary fs-5 mb-2">(012) 0345 6789</a>
-                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd
-                                    States of America.</p>
-                            </div>
+                            <h4 class="mb-2">Homestay</h4>
+                            <p class="mb-0">Pilih homestay yang sesuai dengan kebutuhan dan lokasi destinasi wisata.</p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="office-item p-4">
-                            <div class="office-img mb-4">
-                                <img src="{{ asset('assets/img/office-3.jpg') }}" class="img-fluid w-100 rounded"
-                                    alt="">
-                            </div>
-                            <div class="office-content d-flex flex-column">
-                                <h4 class="mb-2">United Kingdom</h4>
-                                <a href="#" class="text-secondary fs-5 mb-2">01234.567.890</a>
-                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd
-                                    States of America.</p>
-                            </div>
-                        </div>
-                    </div>
+
+                    <!-- Booking Homestay -->
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="office-item p-4">
+                        <div class="office-item p-4 text-center">
                             <div class="office-img mb-4">
-                                <img src="{{ asset('assets/img/office-4.jpg') }}" class="img-fluid w-100 rounded"
-                                    alt="">
+                                <img src="{{ asset('assets/img/kamar.jpeg') }}" class="img-fluid w-100 rounded"
+                                    alt="Booking Homestay">
                             </div>
-                            <div class="office-content d-flex flex-column">
-                                <h4 class="mb-2">India</h4>
-                                <a href="#" class="text-secondary fs-5 mb-2">+123.45.67890</a>
-                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd
-                                    States of America.</p>
-                            </div>
+                            <h4 class="mb-2">Booking Homestay</h4>
+                            <p class="mb-0">Lakukan booking homestay melalui sistem booking kami dengan mudah dan aman.
+                            </p>
                         </div>
                     </div>
+
+                    <!-- Ulasan Wisata -->
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.9s">
+                        <div class="office-item p-4 text-center">
+                            <div class="office-img mb-4">
+                                <img src="{{ asset('assets/img/ulasan-wisata.jpg') }}" class="img-fluid w-100 rounded"
+                                    alt="Ulasan Wisata">
+                            </div>
+                            <h4 class="mb-2">Ulasan Wisata</h4>
+                            <p class="mb-0">Baca ulasan wisatawan lain dan tinggalkan review pengalamanmu sendiri.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
