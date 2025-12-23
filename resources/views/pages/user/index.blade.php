@@ -53,7 +53,8 @@
                     <select name="role" class="form-control filter-input">
                         <option value="">Semua</option>
                         <option value="admin" {{ request('role') == 'admin' ? 'selected' : '' }}>Admin</option>
-                        <option value="user" {{ request('role') == 'user' ? 'selected' : '' }}>User</option>
+                        <option value="warga" {{ request('role') == 'warga' ? 'selected' : '' }}>Warga</option>
+                        <option value="mitra" {{ request('role') == 'mitra' ? 'selected' : '' }}>Mitra</option>
                     </select>
                 </div>
 
@@ -97,8 +98,13 @@
                     <div class="user-card text-center p-4 shadow rounded-4">
 
                         <div class="avatar mb-3">
-                            <img src="https://ui-avatars.com/api/?name={{ urlencode($user->name) }}&background=random&size=100"
-                                alt="Avatar {{ $user->name }}" class="rounded-circle shadow-sm">
+                            @if ($user->profileMedia)
+                                <img src="{{ asset('storage/' . $user->profileMedia->file_name) }}" width="100"
+                                    height="100" class="rounded-circle shadow-sm" style="object-fit: cover;">
+                            @else
+                                <img src="{{ asset('assets/img/avatar-placeholder.jpeg') }}" width="100" height="100"
+                                    class="rounded-circle shadow-sm" style="object-fit: cover;">
+                            @endif
                         </div>
 
                         <div class="user-name fw-bold fs-5">{{ $user->name }}</div>

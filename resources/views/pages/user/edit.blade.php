@@ -45,10 +45,23 @@
             <div class="mb-3">
                 <label class="form-label">Role</label>
                 <select name="role" class="form-control">
-                    <option value="karyawan" {{ old('role') == 'karyawan' ? 'selected' : '' }}>Admin</option>
-                    <option value="manager" {{ old('role') == 'manager' ? 'selected' : '' }}>Warga</option>
-                    <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Mitra</option>
+                    <option value="admin" {{ old('role', $user->role) == 'admin' ? 'selected' : '' }}>Admin</option>
+                    <option value="warga" {{ old('role', $user->role) == 'warga' ? 'selected' : '' }}>Warga</option>
+                    <option value="mitra" {{ old('role', $user->role) == 'mitra' ? 'selected' : '' }}>Mitra</option>
                 </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Foto Profil</label>
+
+                @if ($user->profileMedia)
+                    <div class="mb-2">
+                        <img src="{{ asset('storage/' . $user->profileMedia->file_name) }}" width="80" height="80"
+                            class="rounded-circle" style="object-fit: cover;">
+                    </div>
+                @endif
+
+                <input type="file" name="profile_picture" class="form-control">
             </div>
 
             <button class="btn btn-primary">Update</button>

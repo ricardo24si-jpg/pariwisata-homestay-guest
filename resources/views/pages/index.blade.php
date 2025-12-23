@@ -10,36 +10,36 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                    <img src="{{ asset('assets/img/carousel-1.jpg') }}" class="img-fluid" alt="Image">
+                    <img src="{{ asset('assets/img/pemandangan1.jpg') }}" class="img-fluid" alt="Image">
                     <div class="carousel-caption">
                         <div class="text-center p-4" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                                Solution For All Type Of Visas</h4>
+                                Solusi untuk Semua Jenis Visa</h4>
                             <h1 class="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp"
-                                data-wow-delay="0.3s">Immigration Process Starts Here!</h1>
-                            <p class="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">Lorem Ipsum is
-                                simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                industry's standard dummy text ever since the 1500s,
+                                data-wow-delay="0.3s">Proses Imigrasi Dimulai Di Sini!</h1>
+                            <p class="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">Kami menyediakan
+                                layanan profesional untuk membantu Anda dalam proses pengurusan visa
+                                dengan mudah, cepat, dan terpercaya.
                             </p>
                             <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp"
-                                data-wow-delay="0.7s" href="#">More Details</a>
+                                data-wow-delay="0.7s" href="{{ route('about') }}">More Details</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('assets/img/carousel-2.jpg') }}" class="img-fluid" alt="Image">
+                    <img src="{{ asset('assets/img/pemandangan2.jpg') }}" class="img-fluid" alt="Image">
                     <div class="carousel-caption">
                         <div class="text-center p-4" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                                Solution For All Type Of Visas</h5>
+                                Solusi Lengkap Layanan Visa</h5>
                             <h1 class="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp"
-                                data-wow-delay="0.3s">Best Visa Immigrations Services</h1>
-                            <p class="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">Lorem Ipsum is
-                                simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                industry's standard dummy text ever since the 1500s,
+                                data-wow-delay="0.3s">Layanan Imigrasi Visa Terpercaya</h1>
+                            <p class="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">Kami membantu proses
+                                pengurusan visa Anda dengan pelayanan profesional, cepat,
+                                dan sesuai dengan kebutuhan perjalanan internasional Anda.
                             </p>
                             <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp"
-                                data-wow-delay="0.7s" href="#">More Details</a>
+                                data-wow-delay="0.7s" href="{{ route('about') }}">More Details</a>
                         </div>
                     </div>
                 </div>
@@ -335,22 +335,22 @@
 
     <!-- Testimonial Start -->
     <div class="container-fluid testimonial overflow-hidden py-5">
-        <div class="container">
+        <div class="container pb-5">
             <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="sub-style">
                     <h5 class="sub-title text-primary px-3">OUR CLIENTS RIVIEWS</h5>
                 </div>
                 <h1 class="display-5 mb-4">What Our Clients Say</h1>
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at
-                    atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam
-                    necessitatibus saepe in ab? Repellat!</p>
+                <p class="mb-0">Berikut adalah pendapat dan pengalaman pengunjung setelah menikmati berbagai destinasi
+                    wisata.
+                    Ulasan ini diharapkan dapat membantu pengunjung lain dalam memilih tujuan wisata terbaik!</p>
             </div>
             <div class="owl-carousel testimonial-carousel wow zoomInDown" data-wow-delay="0.2s">
                 <div class="testimonial-item">
                     <div class="testimonial-content p-4 mb-5">
-                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitati eiusmod tempor incididunt.
+                        <p class="fs-5 mb-0">Lokasinya mudah dijangkau dan tidak terlalu ramai. Pemandangan alam yang hijau
+                            dan sungai yang jernih membuat saya ingin kembali lagi. Sangat cocok bagi yang ingin menikmati
+                            liburan santai dan menyatu dengan alam.
                         </p>
                         <div class="d-flex justify-content-end">
                             <i class="fas fa-star text-secondary"></i>
@@ -366,16 +366,17 @@
                                 alt="img">
                         </div>
                         <div class="my-auto">
-                            <h5>Person Name</h5>
-                            <p class="mb-0">Profession</p>
+                            <h5>Jane</h5>
+                            <p class="mb-0">Ibu Rumah Tangga</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-content p-4 mb-5">
-                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitati eiusmod tempor incididunt.
+                        <p class="fs-5 mb-0">Tempat ini benar-benar menakjubkan! Pemandangan alamnya sangat indah, udara
+                            segarnya bikin betah berlama-lama. Anak-anak sangat senang bermain di area terbuka, dan banyak
+                            spot foto yang instagramable. Fasilitasnya juga cukup lengkap, jadi liburan di sini terasa
+                            nyaman dan menyenangkan untuk keluarga.
                         </p>
                         <div class="d-flex justify-content-end">
                             <i class="fas fa-star text-secondary"></i>
@@ -391,16 +392,17 @@
                                 alt="img">
                         </div>
                         <div class="my-auto">
-                            <h5>Person Name</h5>
-                            <p class="mb-0">Profession</p>
+                            <h5>Prilly</h5>
+                            <p class="mb-0">Influenser</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-content p-4 mb-5">
-                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitati eiusmod tempor incididunt.
+                        <p class="fs-5 mb-0">Tempat ini benar-benar menakjubkan! Pemandangan alamnya sangat indah, udara
+                            segarnya bikin betah berlama-lama. Anak-anak sangat senang bermain di area terbuka, dan banyak
+                            spot foto yang instagramable. Fasilitasnya juga cukup lengkap, jadi liburan di sini terasa
+                            nyaman dan menyenangkan untuk keluarga.
                         </p>
                         <div class="d-flex justify-content-end">
                             <i class="fas fa-star text-secondary"></i>
@@ -416,8 +418,8 @@
                                 alt="img">
                         </div>
                         <div class="my-auto">
-                            <h5>Person Name</h5>
-                            <p class="mb-0">Profession</p>
+                            <h5>Antony</h5>
+                            <p class="mb-0">Mahasiswa</p>
                         </div>
                     </div>
                 </div>

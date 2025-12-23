@@ -98,7 +98,7 @@
                         <div class="col-md-12">
                             <div class="form-floating">
                                 <input type="text" name="fasilitas_json"
-                                    value="{{ old('fasilitas_json', implode(', ', $homestay->fasilitas_json ?? [])) }}"
+                                    value="{{ old('fasilitas_json', implode(', ', json_decode($homestay->fasilitas_json, true) ?? [])) }}"
                                     class="form-control input-glass @error('fasilitas_json') is-invalid @enderror"
                                     placeholder="WiFi, AC, TV">
                                 <label>Fasilitas (pisahkan dengan koma)</label>

@@ -19,7 +19,7 @@ class AuthController extends Controller
     {
         $request->validate([
             'email'    => 'required|email',
-            'password' => ['required', 'min:8', 'regex:/[A-Z]/'],
+            'password' => ['required', 'min:8'],
         ], [
             'email.required'    => 'Email wajib diisi!',
             'email.email'       => 'Format email tidak valid!',

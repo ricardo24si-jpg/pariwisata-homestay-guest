@@ -29,10 +29,13 @@
                 </div>
                 <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
                     <h5 class="sub-title pe-3">About the company</h5>
-                    <h1 class="display-5 mb-4">We’re Trusted Immigration Consultant Agency.</h1>
-                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto consectetur
-                        iusto perferendis blanditiis assumenda dignissimos, commodi fuga culpa earum explicabo libero sint
-                        est mollitia saepe! Sequi asperiores rerum nemo!</p>
+                    <h1 class="display-5 mb-4">Agensi Konsultan Imigrasi Terpercaya.</h1>
+                    <p class="mb-4">
+                        ParStay hadir untuk memudahkan Anda menjelajahi destinasi wisata menarik, memesan homestay
+                        dan kamar yang nyaman,
+                        serta membaca ulasan wisata yang terpercaya. Semua informasi lengkap dan praktis, agar pengalaman
+                        liburan Anda semakin menyenangkan.
+                    </p>
                     <div class="row gy-4 align-items-center">
                         <div class="col-12 col-sm-6 d-flex align-items-center">
                             <i class="fas fa-map-marked-alt fa-3x text-secondary"></i>
@@ -71,8 +74,7 @@
                                 </div>
                                 <div class="d-flex flex-column justify-content-center">
                                     <span class="text-primary">Have any questions?</span>
-                                    <span class="text-secondary fw-bold fs-5" style="letter-spacing: 2px;">Free: +0123 456
-                                        7890</span>
+                                    <span class="text-secondary fw-bold fs-5" style="letter-spacing: 2px;">Free: +62 812-6477-5971</span>
                                 </div>
                             </div>
                         </div>
@@ -89,77 +91,145 @@
             <div class="office">
                 <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">Worlwide Offices</h5>
+                        <h5 class="sub-title text-primary px-3">Alur Pemesanan</h5>
                     </div>
-                    <h1 class="display-5 mb-4">Explore Our Office Worldwide</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at
-                        atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam
-                        necessitatibus saepe in ab? Repellat!</p>
+                    <h1 class="display-5 mb-4">Cara Memesan Wisata & Homestay</h1>
+                    <p class="mb-0">Ikuti alur berikut untuk menjelajahi destinasi wisata, memilih homestay, dan melakukan
+                        booking dengan mudah.</p>
                 </div>
                 <div class="row g-4 justify-content-center">
+
+                    <!-- Destinasi Wisata -->
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="office-item p-4">
+                        <div class="office-item p-4 text-center">
                             <div class="office-img mb-4">
-                                <img src="{{ asset('assets/img/office-2.jpg') }}" class="img-fluid w-100 rounded"
-                                    alt="">
+                                <img src="{{ asset('assets/img/pemandangan1.jpg') }}" class="img-fluid w-100 rounded"
+                                    alt="Destinasi Wisata">
                             </div>
-                            <div class="office-content d-flex flex-column">
-                                <h4 class="mb-2">Australia</h4>
-                                <a href="#" class="text-secondary fs-5 mb-2">+123.456.7890</a>
-                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of
-                                    America.</p>
-                            </div>
+                            <h4 class="mb-2">Destinasi Wisata</h4>
+                            <p class="mb-0">Telusuri berbagai destinasi wisata menarik yang tersedia di website kami.</p>
                         </div>
                     </div>
+
+                    <!-- Homestay -->
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="office-item p-4">
+                        <div class="office-item p-4 text-center">
                             <div class="office-img mb-4">
-                                <img src="{{ asset('assets/img/office-1.jpg') }}" class="img-fluid w-100 rounded"
-                                    alt="">
+                                <img src="{{ asset('assets/img/Homestay2.jpeg') }}" class="img-fluid w-100 rounded"
+                                    alt="Homestay">
                             </div>
-                            <div class="office-content d-flex flex-column">
-                                <h4 class="mb-2">Canada</h4>
-                                <a href="#" class="text-secondary fs-5 mb-2">(012) 0345 6789</a>
-                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of
-                                    America.</p>
-                            </div>
+                            <h4 class="mb-2">Homestay</h4>
+                            <p class="mb-0">Pilih homestay yang sesuai dengan kebutuhan dan lokasi destinasi wisata.</p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="office-item p-4">
-                            <div class="office-img mb-4">
-                                <img src="{{ asset('assets/img/office-3.jpg') }}" class="img-fluid w-100 rounded"
-                                    alt="">
-                            </div>
-                            <div class="office-content d-flex flex-column">
-                                <h4 class="mb-2">United Kingdom</h4>
-                                <a href="#" class="text-secondary fs-5 mb-2">01234.567.890</a>
-                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of
-                                    America.</p>
-                            </div>
-                        </div>
-                    </div>
+
+                    <!-- Booking Homestay -->
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="office-item p-4">
+                        <div class="office-item p-4 text-center">
                             <div class="office-img mb-4">
-                                <img src="{{ asset('assets/img/office-4.jpg') }}" class="img-fluid w-100 rounded"
-                                    alt="">
+                                <img src="{{ asset('assets/img/kamar.jpeg') }}" class="img-fluid w-100 rounded"
+                                    alt="Booking Homestay">
                             </div>
-                            <div class="office-content d-flex flex-column">
-                                <h4 class="mb-2">India</h4>
-                                <a href="#" class="text-secondary fs-5 mb-2">+123.45.67890</a>
-                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of
-                                    America.</p>
-                            </div>
+                            <h4 class="mb-2">Booking Homestay</h4>
+                            <p class="mb-0">Lakukan booking homestay melalui sistem booking kami dengan mudah dan aman.
+                            </p>
                         </div>
                     </div>
+
+                    <!-- Ulasan Wisata -->
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.9s">
+                        <div class="office-item p-4 text-center">
+                            <div class="office-img mb-4">
+                                <img src="{{ asset('assets/img/ulasan-wisata.jpg') }}" class="img-fluid w-100 rounded"
+                                    alt="Ulasan Wisata">
+                            </div>
+                            <h4 class="mb-2">Ulasan Wisata</h4>
+                            <p class="mb-0">Baca ulasan wisatawan lain dan tinggalkan review pengalamanmu sendiri.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
     <!-- Contact End -->
+
+    <!-- Developer Bio Start -->
+    <div class="container-fluid py-5 bg-light">
+        <div class="container"> <!-- INI PENTING -->
+            <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <h5 class="sub-title text-primary px-3 mb-3" style="letter-spacing: 2px;">DEVELOPER</h5>
+                <h1 class="display-5 fw-bold mb-4">Meet Our Developer</h1>
+            </div>
+
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="row g-0 align-items-stretch">
+                    <!-- Foto kiri -->
+                    <div class="col-md-4 d-flex align-items-center justify-content-center p-5"
+                        style="background: linear-gradient(135deg, #979da8 0%, #334155 100%);">
+                        <div class="text-center text-white">
+                            <img src="{{ asset('assets/img/avatar-placeholder.jpeg') }}"
+                                class="img-fluid rounded-circle mb-4 shadow"
+                                style="width: 180px; height: 180px; object-fit: cover; border: 5px solid rgba(255,255,255,0.2);">
+
+                            <h3 class="fw-bold mb-1">Ricardo Zulkifli</h3>
+                            <h4 class="fw-light mb-3 ">Raja Gukguk</h4>
+
+                            <span class="badge bg-primary px-4 py-2">
+                                Fullstack Web Developer
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Konten kanan -->
+                    <div class="col-md-8 bg-white">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="fw-bold mb-4" style="color: #1e293b;">ParStay</h2>
+
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <h6 class="text-uppercase fw-bold mb-3 text-muted">Profile Information</h6>
+                                    <p><strong>NIM:</strong> 2457301121</p>
+                                    <p><strong>Program Studi:</strong> Sistem Informasi</p>
+                                    <p class="text-primary fw-semibold">Fullstack Web Developer</p>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h6 class="text-uppercase fw-bold mb-3 text-muted">Skills</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-light text-dark border">HTML</span>
+                                        <span class="badge bg-light text-dark border">CSS</span>
+                                        <span class="badge bg-light text-dark border">JavaScript</span>
+                                        <span class="badge bg-light text-dark border">React</span>
+                                        <span class="badge bg-light text-dark border">Node.js</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <p class="text-muted">
+                                Bersemangat dalam membangun aplikasi web yang bersih, efisien, serta menghadirkan pengalaman
+                                pengguna yang ramah dan optimal.
+                            </p>
+
+                            <!-- Sosial -->
+                            <div class="d-flex gap-3 mt-3">
+                                <a href="https://github.com/ricardo24si-jpg" class="text-dark fs-5"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/ricardo-zulkifli-raja-guk-guk-b8508b3a1/"
+                                    class="text-primary fs-5"><i class="fab fa-linkedin"></i></a>
+                                <a href="mailto:ricardo24si@mahasiswa.pcr.ac.id" class="text-muted fs-5"><i
+                                        class="fas fa-envelope"></i></a>
+                                <a href="https://youtube.com/@ricardozulkifli?si=AXUYOYbU5ofrTFce"
+                                    class="text-danger fs-5"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Developer Bio End -->
 @endsection

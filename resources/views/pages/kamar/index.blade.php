@@ -117,7 +117,7 @@
 
                                 {{-- Gambar --}}
                                 <div class="hotel-img position-relative">
-                                    <img src="{{ asset('Assets/img/office-3.jpg') }}" class="img-fluid w-100"
+                                    <img src="{{ asset('Assets/img/kamar.jpeg') }}" class="img-fluid w-100"
                                         style="height: 180px; object-fit: cover;">
                                 </div>
 

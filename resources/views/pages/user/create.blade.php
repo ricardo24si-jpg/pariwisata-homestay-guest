@@ -11,11 +11,13 @@
     <style>
         /* ===== Background sama seperti LOGIN (warna + bubble) ===== */
         body {
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 40px 16px;
+            /* ⬅️ penting */
             background-color: #d1d5db;
             font-family: 'Poppins', sans-serif;
             position: relative;
@@ -49,14 +51,15 @@
         .register-card {
             position: relative;
             z-index: 2;
-            width: 420px;
+            width: 100%;
+            max-width: 420px;
+            /* ⬅️ batas aman */
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(6px);
             border-radius: 20px;
             padding: 2.4rem;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
             border: 1px solid rgba(255, 255, 255, 0.4);
-            transition: 0.35s ease;
         }
 
         .register-card:hover {
@@ -108,7 +111,7 @@
     <div class="register-card">
 
         <div class="text-center mb-4">
-            <img src="{{ asset('Assets/img/brand-logo.png') }}" width="75" class="mb-3">
+            <img src="{{ asset('Assets/img/brand-logo.png') }}" width="340" class="mb-2">
             <h3 class="fw-bold text-primary">Create Account</h3>
             <p class="text-muted small">Buat akun baru untuk melanjutkan.</p>
         </div>
@@ -127,7 +130,7 @@
             </div>
         @endif
 
-        <form action="{{ route('users.store') }}" method="POST">
+        <form action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="mb-3">
@@ -152,15 +155,16 @@
                 <input type="password" name="password_confirmation" class="form-control"
                     placeholder="Ulangi password...">
             </div>
-            <div class="mb-3">
-                <label class="form-label">Role</label>
-                <select name="role" class="form-control">
-                    <option value="karyawan" {{ old('role') == 'karyawan' ? 'selected' : '' }}>Admin</option>
-                    <option value="manager" {{ old('role') == 'manager' ? 'selected' : '' }}>Warga</option>
-                    <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Mitra</option>
-                </select>
-            </div>
+            <select name="role" class="form-control">
+                <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
+                <option value="warga" {{ old('role') == 'warga' ? 'selected' : '' }}>Warga</option>
+                <option value="mitra" {{ old('role') == 'mitra' ? 'selected' : '' }}>Mitra</option>
+            </select>
 
+            <div class="mb-3">
+                <label class="form-label">Foto Profil</label>
+                <input type="file" name="profile_picture" class="form-control">
+            </div>
 
             <button type="submit" class="btn btn-primary w-100 mt-2">Buat Akun</button>
         </form>
@@ -170,7 +174,7 @@
             <a href="{{ route('login') }}" class="fw-semibold text-primary">Masuk di sini</a>
         </p>
 
-        <p class="text-center text-muted small footer-text">
+        <p class="text-center text-muted small footer-text mb-0">
             © {{ date('Y') }} Ricardo — All rights reserved.
         </p>
 

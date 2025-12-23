@@ -1,7 +1,8 @@
 <div class="container-fluid nav-bar p-0">
     <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
         <a href="{{ route('dashboard') }}" class="navbar-brand p-0">
-            <h1 class="display-5 text-secondary m-0">Bina Desa</h1>
+            <img src="{{ asset('assets/img/logo.png') }}" alt="Bina Desa Logo"
+                style="height: 100px; width: auto; max-width: none; max-height: none;">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -24,9 +25,9 @@
                 </a>
 
                 {{-- SERVICE --}}
-                <a href="{{ route('service') }}"
+                <a href="{{ route('ulasan.index') }}"
                     class="nav-item nav-link {{ request()->routeIs('service') ? 'active' : '' }}">
-                    Service
+                    Ulasan
                 </a>
 
                 {{-- DROPDOWN PAGES --}}
@@ -80,9 +81,9 @@
                 </div>
 
                 {{-- CONTACT --}}
-                <a href="{{ route('contact') }}"
+                <a href="{{ route('booking.index') }}"
                     class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">
-                    Contact
+                    Booking
                 </a>
 
             </div>
