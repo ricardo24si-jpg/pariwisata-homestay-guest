@@ -168,7 +168,7 @@
                     <div class="col-md-4 d-flex align-items-center justify-content-center p-5"
                         style="background: linear-gradient(135deg, #979da8 0%, #334155 100%);">
                         <div class="text-center text-white">
-                            <img src="{{ asset('assets/img/avatar-placeholder.jpeg') }}"
+                            <img src="{{ asset('assets/img/aldo.jpeg') }}"
                                 class="img-fluid rounded-circle mb-4 shadow"
                                 style="width: 180px; height: 180px; object-fit: cover; border: 5px solid rgba(255,255,255,0.2);">
 
