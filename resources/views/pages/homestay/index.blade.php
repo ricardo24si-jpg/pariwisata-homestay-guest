@@ -75,7 +75,7 @@
 
                             <!-- Gambar -->
                             <div class="homestay-img">
-                                <img src="{{ asset('Assets/img/Homestay2.jpeg') }}">
+                                <img src="{{ asset('assets/img/Homestay2.jpeg') }}">
                                 <div class="img-overlay"></div>
                             </div>
 

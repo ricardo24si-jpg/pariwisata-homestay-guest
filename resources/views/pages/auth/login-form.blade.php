@@ -101,7 +101,7 @@
                 <div class="login-card animate__animated animate__fadeInUp">
 
                     <div class="text-center mb-4">
-                        <img src="{{ asset('Assets/img/brand-logo.png') }}" width="340" class="mb-2">
+                        <img src="{{ asset('assets/img/brand-logo.png') }}" width="340" class="mb-2">
 
                         <h3 class="fw-bold text-primary mb-1">Hello Again!</h3>
                         <p class="text-muted small mb-0">
